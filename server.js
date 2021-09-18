@@ -1,8 +1,8 @@
 'ues strict';
 
 const express = require('express');
-
-const weatherJs = require('./weather.js')
+const movieJs = require('./controllers/movie.controller');
+const weatherJs = require('./controllers/weather.controller');
 const cors = require('cors');
 const axios = require('axios');
 const PORT = process.env.PORT;
@@ -18,9 +18,9 @@ app.get('/', (request, respunce) => {
 
     respunce.send('Hello World 👋 My Name is Sam');
 });
-const weatherJs = require('./controller/weather.controller');
 
-const movieJs = require('./controller/movie.controller');
+
+
 
 app.get("/weather",weatherJs);
 
